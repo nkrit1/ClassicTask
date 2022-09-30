@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Square
 {
-    class Const
+    public class Const
     {
         public const double Eps = 1e-9;
     }

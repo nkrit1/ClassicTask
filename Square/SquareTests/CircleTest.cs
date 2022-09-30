@@ -29,6 +29,17 @@ namespace SquareTests
 			Assert.Catch<ArgumentException>(() => new Circle(0d));
 		}
 
+		[Test]
+		public void CalculateSquareTest()
+		{
+			var radius = 5;
+			var circle = new Circle(radius);
+			var expectedValue = Math.PI * Math.Pow(radius, 2d);
 
+			var square = circle.CalculateSquare();
+
+			Assert.NotNull(square);
+			Assert.Less(Math.Abs(square - expectedValue), Const.Eps);
+		}
 	}
 }

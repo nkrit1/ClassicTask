@@ -6,9 +6,9 @@ namespace Square
 {
     public static class CalculationHelp
     {
-        public static void SwapEdges(ref double a, ref double b)
+        public static void SwapEdges<T>(ref T a, ref T b)
         {
-            double temp = a;
+            T temp = a;
             a = b;
             b = temp;
         }
